@@ -1,0 +1,6 @@
+{
+  "name": "NEXUS Terminal OS",
+  "description": "Un portafolio interactivo de comandos CLI ultra-moderno y retro CRT con integración a Supabase, diagnóstico de recursos en vivo en tiempo real (sysinfo), información del kernel (uname), traza de red (traceroute), calendario ASCII (cal), latencia (ping) y sesión (whoami)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
