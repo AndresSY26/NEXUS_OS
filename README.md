@@ -12,6 +12,16 @@ El proyecto está diseñado bajo un estándar riguroso de desarrollo, con persis
 
 El núcleo de NexusOS se ha desarrollado utilizando los estándares de ingeniería web más modernos y robustos, logrando una arquitectura ligera, modular y de altísimo rendimiento:
 
+<div align="left">
+  <img src="https://img.shields.io/badge/TypeScript-v5.9.3-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Next.js-v15.4.9-black?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-v19.2.1-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4.1.11-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Motion-v12.23.24-FF0055?style=flat-square&logo=framer&logoColor=white" alt="Motion" />
+  <img src="https://img.shields.io/badge/Supabase-v2.110.0-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase" />
+  <img src="https://img.shields.io/badge/Google_GenAI-v2.4.0-8E75C2?style=flat-square&logo=google-gemini&logoColor=white" alt="Google GenAI" />
+</div>
+
 ### Detalles del Stack de Desarrollo
 *   **Lenguaje**: **TypeScript (v5.9.3)** - Tipado estático estricto para garantizar la robustez del código.
 *   **Framework Principal**: **Next.js (v15.4.9)** con arquitectura **App Router** para rendimiento de última generación.

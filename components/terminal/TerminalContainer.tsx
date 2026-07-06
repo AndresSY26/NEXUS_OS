@@ -1013,7 +1013,7 @@ export default function TerminalContainer() {
         }
         @keyframes scanline {
           0% { transform: translateY(-100%); }
-          100% { transform: translateY(100%); }
+          100% { transform: translateY(100vh); }
         }
         @keyframes flicker {
           0% { opacity: 0.985; }
@@ -1056,17 +1056,38 @@ export default function TerminalContainer() {
         .animate-progress-slide {
           animation: progress-slide 1.5s infinite linear, bar-glitch 2.5s infinite steps(10, end);
         }
+        .crt-scanlines {
+          background: linear-gradient(
+            rgba(18, 16, 16, 0) 50%, 
+            rgba(0, 0, 0, 0.4) 50%
+          );
+          background-size: 100% 4px;
+        }
+        .crt-scrolling-line {
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.08) 10%,
+            rgba(255, 255, 255, 0) 20%
+          );
+        }
+        .crt-screen-reflection {
+          background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0) 70%);
+        }
       `}</style>
 
-      {/* Efecto de parpadeo CRT y líneas de escaneo en la pantalla */}
-      <div className="absolute inset-0 pointer-events-none z-50 overflow-hidden opacity-[0.03]"
-           style={{ 
-             background: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))',
-             backgroundSize: '100% 4px, 3px 100%'
-           }} />
+      {/* Capa superpuesta con efecto de scanline CRT de monitor clásico */}
+      <div className="absolute inset-0 pointer-events-none z-40 overflow-hidden">
+        {/* Líneas de escaneo horizontales estáticas */}
+        <div className="absolute inset-0 crt-scanlines opacity-[0.14]" />
+        {/* Barra de haz de electrones en movimiento descendente */}
+        <div className="absolute inset-x-0 h-1/5 crt-scrolling-line animate-scanline pointer-events-none" />
+        {/* Reflejo sutil de cristal curvado del tubo */}
+        <div className="absolute inset-0 crt-screen-reflection pointer-events-none" />
+      </div>
 
-      {/* Estilo de Marco CRT decorativo y Vignette Sutil */}
-      <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_100px_rgba(0,0,0,0.85)] z-20" />
+      {/* Estilo de Marco CRT decorativo y Vignette Sutil para recrear pantalla de tubo */}
+      <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.92)] z-30" />
 
       {/* Cabecera de la Terminal - Window Header */}
       <div className="h-10 bg-[#161616] flex items-center px-4 border-b border-[#333] justify-between z-10 -mx-3 -mt-3 sm:-mx-5 sm:-mt-5 mb-4 select-none relative">
